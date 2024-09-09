@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Dict
 from app.controllers.jobmatch import compare_resume_to_job_description ,genrate_coverletter_resume_to_job_description ,genrate_tips_resume_to_job_description
 
 router = APIRouter()
@@ -36,6 +35,6 @@ async def tips_endpoint(request: JobDescriptionRequest):
     if not job_description:
         raise HTTPException(status_code=400, detail="Job description is required.")
     result = await genrate_tips_resume_to_job_description(job_description)
-    if not result.get("cover letter"):
-        raise HTTPException(status_code=500, detail="Cover letter not generated.")
+    if not result.get("tips"):
+        raise HTTPException(status_code=500, detail="tips not generated.")
     return result

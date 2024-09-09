@@ -10,7 +10,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # You can change this to specific domain when deploying
+    allow_origins=["https://hiringwebsite.netlify.app"],  # You can change this to specific domain when deploying
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
     allow_headers=["*"],  # Allow all headers (this is important for file uploads)

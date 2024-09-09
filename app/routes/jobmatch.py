@@ -35,4 +35,7 @@ async def tips_endpoint(request: JobDescriptionRequest):
     job_description = request.job_description
     if not job_description:
         raise HTTPException(status_code=400, detail="Job description is required.")
-    return await genrate_tips_resume_to_job_description(job_description)
+    result = await genrate_tips_resume_to_job_description(job_description)
+    if not result.get("cover letter"):
+        raise HTTPException(status_code=500, detail="Cover letter not generated.")
+    return result

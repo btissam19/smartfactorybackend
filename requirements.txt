@@ -25,6 +25,7 @@ langchain-text-splitters==0.2.4
 langdetect==1.0.9
 langsmith==0.1.111
 python-dotenv==1.0.1
+python-multipart==0.0.9
 regex==2024.7.24
 requests==2.32.3
 

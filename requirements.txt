@@ -24,9 +24,6 @@ langchain-google-genai==1.0.10
 langchain-text-splitters==0.2.4
 langdetect==1.0.9
 langsmith==0.1.111
-pinecone-client==5.0.1                  
-pinecone-plugin-inference==1.1.0
-pinecone-plugin-interface==0.0.7 
 python-dotenv==1.0.1
 python-multipart==0.0.9
 pypdf==4.3.1
